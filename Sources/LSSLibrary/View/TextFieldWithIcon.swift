@@ -12,7 +12,13 @@ public struct TextFieldWithIcon: View {
     public init() {}
     
     @State private var text: String = ""
-    public var placeholder:String
+    var placeholder:String
+    
+    public init(placeholder :String = "") {
+        self.placeholder = placeholder
+    }
+    
+    
     public var body: some View {
         HStack {
             Image(systemName: "lock")
