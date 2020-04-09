@@ -9,6 +9,8 @@ import SwiftUI
 
 @available(iOS 13, * )
 public struct TextFieldWithIcon: View {
+    public init() {}
+    
     @State private var text: String = ""
     public var placeholder:String
     public var body: some View {
