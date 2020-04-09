@@ -10,7 +10,7 @@ import SwiftUI
 @available(iOS 13, * )
 public struct TextFieldWithIcon: View {
     @State private var text: String = ""
-    var placeholder:String
+    public var placeholder:String
     public var body: some View {
         HStack {
             Image(systemName: "lock")

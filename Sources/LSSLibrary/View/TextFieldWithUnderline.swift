@@ -22,9 +22,9 @@ import SwiftUI
 @available(iOS 13, * )
 public struct TextFieldWithUnderline: View {
     @State private var text: String = ""
-    var placeholder:String
-    var onFousLineColor:Color = .red
-    var lineColor:Color = .gray
+    public var placeholder:String
+    public var onFousLineColor:Color = .red
+    public var lineColor:Color = .gray
     let lineHeight : CGFloat = 1.0
     @State private var dividerColor:Color = .gray
     
