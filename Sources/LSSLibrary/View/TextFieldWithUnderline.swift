@@ -28,7 +28,7 @@ public struct TextFieldWithUnderline: View {
     let lineHeight : CGFloat = 1.0
     @State private var dividerColor:Color = .gray
     
-    var body: some View {
+    public var body: some View {
  
         VStack {
             TextField(placeholder, text:$text , onEditingChanged: { changed in

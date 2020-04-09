@@ -11,7 +11,7 @@ import SwiftUI
 public struct TextFieldWithIcon: View {
     @State private var text: String = ""
     var placeholder:String
-    var body: some View {
+    public var body: some View {
         HStack {
             Image(systemName: "lock")
             TextField(placeholder, text:$text , onEditingChanged: { changed in
