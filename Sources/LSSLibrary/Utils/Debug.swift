@@ -14,7 +14,7 @@ public class Debug {
         case double
         case plus
     }
-    class func line(type:DebugLineType){
+    class public func line(type:DebugLineType){
         #if DEBUG
         switch(type) {
         case .signle:
@@ -27,7 +27,7 @@ public class Debug {
         #else
         #endif
     }
-    class func log(_ str:String) {
+    class public func log(_ str:String) {
         #if DEBUG
         print(str)
         #else
@@ -35,7 +35,7 @@ public class Debug {
     }
     
 
-    class func log(_ object:Any) {
+    class public func log(_ object:Any) {
         #if DEBUG
             print(object)
         #else
