@@ -99,7 +99,7 @@ public class DocumentPropertyCodable<T:Codable> {
     }
     
 
-    func get() -> T? {
+    public func get() -> T? {
         do {
             let data = try NSData(contentsOfFile: self.getDocumentPath) as Data
             let decoder = PropertyListDecoder()
@@ -113,7 +113,7 @@ public class DocumentPropertyCodable<T:Codable> {
         }
     }
     
-    func save(object:T) {
+    private func save(object:T) {
         
         let path = self.getDocumentPath
         
