@@ -113,7 +113,7 @@ public class DocumentPropertyCodable<T:Codable> {
         }
     }
     
-    private func save(object:T) {
+    public func save(object:T) {
         
         let path = self.getDocumentPath
         
