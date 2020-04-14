@@ -9,7 +9,7 @@
 //참고 https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
 
 import SwiftUI
-
+@available(iOS 13, * )
 public struct ProgressBarViewConfig {
     var value:Float = 0.0
     var bgColor:Color = Color.gray
@@ -45,6 +45,7 @@ public struct ProgressBarView: View {
 }
 
 #if DEBUG
+@available(iOS 13, * )
 struct ProgressBarView_Previews: PreviewProvider {
     @State static var progressBarViewConfig: ProgressBarViewConfig = ProgressBarViewConfig(value: 0.5, bgColor: .green, fillColor: .yellow)
     static var previews: some View {
