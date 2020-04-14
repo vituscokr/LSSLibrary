@@ -31,7 +31,7 @@ public struct Thumb {
 public struct PhotoWithBottomDescriptionView: View {
 //    public typealias Body = <#type#>
     
-    var thumb : Thumb
+    public var thumb : Thumb
     public var body: some View {
         ZStack(alignment: .bottomLeading) {
             Image(thumb.image)
