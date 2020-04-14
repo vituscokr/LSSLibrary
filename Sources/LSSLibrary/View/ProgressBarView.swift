@@ -11,10 +11,13 @@
 import SwiftUI
 
 @available(iOS 13, * )
-open struct ProgressBarViewConfig {
+public struct ProgressBarViewConfig {
     var value:Float = 0.0
     var bgColor:Color = Color.gray
     var fillColor:Color = Color.red
+    
+    public init() {}
+    
 }
 @available(iOS 13, * )
 public struct ProgressBarView: View {
