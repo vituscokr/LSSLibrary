@@ -47,3 +47,13 @@ struct CheckboxControl_Previews: PreviewProvider {
 //        .previewDisplayName("Figure 5.10")
     }
 }
+
+
+/*
+ struct ContentView: View {
+     @State var checkboxControlConfig: CheckBoxControlConfig = CheckBoxControlConfig(title: "title", selected: false)
+     var body : some View {
+         CheckboxControl(config: $checkboxControlConfig)
+     }
+ }
+ */
