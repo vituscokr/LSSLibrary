@@ -20,19 +20,19 @@ public struct CheckBoxControlConfig {
 }
 @available(iOS 13, * )
 public struct CheckboxControl: View {
-    @State var config:CheckBoxControlConfig
+    @Binding var checkboxControlConfig:CheckBoxControlConfig
     
-    public init(config:State<CheckBoxControlConfig>) {
-        self._config = config
+    public init(config:Binding<CheckBoxControlConfig>) {
+        self._checkboxControlConfig = config
     }
     
     public var body: some View {
         HStack {
-            Image(systemName: self.config.selected ? "checkmark.square" : "square")
-            Text("\(self.config.title)")
-                .strikethrough(self.config.selected, color: .red)
+            Image(systemName: self.checkboxControlConfig.selected ? "checkmark.square" : "square")
+            Text("\(self.checkboxControlConfig.title)")
+                .strikethrough(self.checkboxControlConfig.selected, color: .red)
         }.onTapGesture {
-            self.config.selected.toggle()
+            self.checkboxControlConfig.selected.toggle()
         }
     }
 }
@@ -42,7 +42,7 @@ struct CheckboxControl_Previews: PreviewProvider {
     
     @State static var checkboxConfig = CheckBoxControlConfig(title: "checkbox", selected: false)
     static var previews: some View {
-        CheckboxControl(config: _checkboxConfig)
+        CheckboxControl(config: $checkboxConfig)
 //        .previewLayout(.fixed(width: 400, height: 500))
 //        .previewDisplayName("Figure 5.10")
     }
