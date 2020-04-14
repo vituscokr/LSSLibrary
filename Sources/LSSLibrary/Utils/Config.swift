@@ -147,3 +147,32 @@ public class DocumentPropertyCodable<T:Codable> {
 //
 //
 //Debug.log(settings.get())
+
+
+//사용예 
+
+//    let settings = DocumentPropertyCodable<MySettings>(filename: "settings")
+//
+//    var r = settings.get()
+//
+//    Debug.log(r as Any)
+//
+//
+//
+//    if r == nil {
+//
+//        r = MySettings(someFlag: true, someString: "init", someInt: 0)
+//        Debug.log(r)
+//
+//
+//    }
+//
+//
+//    r?.someFlag = false
+//    r?.someString = "saved"
+//    r?.someInt = 1
+//
+//    settings.save(object: r!)
+//
+//
+//    Debug.log(settings.get())
