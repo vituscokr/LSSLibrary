@@ -32,7 +32,7 @@ public struct PhotoWithBottomDescriptionView: View {
     var thumb : Thumb
     public var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image(thumb.image)
+//            Image(thumb.image)
             
             KFImage(thumb.url)
             .resizable()
