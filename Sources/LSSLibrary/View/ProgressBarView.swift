@@ -16,7 +16,11 @@ public struct ProgressBarViewConfig {
     var bgColor:Color = Color.gray
     var fillColor:Color = Color.red
     
-    public init() {}
+    public init(value:Float, bgColor:Color, fillColor:Color ) {
+        self.value = value
+        self.bgColor = bgColor
+        self.fillColor = fillColor
+    }
     
 }
 @available(iOS 13, * )
