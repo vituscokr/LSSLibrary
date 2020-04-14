@@ -29,12 +29,14 @@ public struct Thumb {
 
 @available(iOS 13, * )
 public struct PhotoWithBottomDescriptionView: View {
+//    public typealias Body = <#type#>
+    
     var thumb : Thumb
     public var body: some View {
         ZStack(alignment: .bottomLeading) {
-//            Image(thumb.image)
+            Image(thumb.image)
             
-            KFImage(thumb.url)
+//            KFImage(thumb.url)
             .resizable()
                 .frame(width:400, height:400)
                .aspectRatio(contentMode: .fill)
