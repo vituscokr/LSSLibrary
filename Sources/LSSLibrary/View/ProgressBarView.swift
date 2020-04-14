@@ -12,7 +12,7 @@ import SwiftUI
 
 @available(iOS 13, * )
 public struct ProgressBarViewConfig {
-    var value:Float = 0.0
+    public var value:Float = 0.0
     var bgColor:Color = Color.gray
     var fillColor:Color = Color.red
     
