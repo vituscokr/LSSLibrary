@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AppEnvironmnet {
+open enum AppEnvironmnet {
     case develop
     case stage
     case release
