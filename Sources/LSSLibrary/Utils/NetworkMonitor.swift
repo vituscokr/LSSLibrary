@@ -35,4 +35,42 @@ public struct NetworkMonitor {
     }
 }
 
+/**
+ 샘플 코드
+ 
+ class SampleModel : ObservableObject {
+
+     @Published var isNetwork : Bool = false
+     
+     var appEnvironment : AppEnvironment = .stage
+     init() {
+         Debug.log(appEnvironment)
+         Debug.log(Notification.Name.didNetworkChange)
+         
+         NetworkMonitor.start()
+     }
+ }
+
+ 
+ 
+ 
+ let didNetworkChange = NotificationCenter.default.publisher(for: .didNetworkChange)
+     .receive(on: DispatchQueue.main)
+ 
+ VStack {
+     if model.isNetwork {
+         Text("onLine")
+     }else {
+         Text("offLine")
+     }
+ }
+ 
+     .onReceive(didNetworkChange) { _ in
+         
+         Debug.log("Network 상태 : \(NetworkMonitor.active)")
+         Debug.log("LTE 여부 : \(NetworkMonitor.expensive)")
+         
+         model.isNetwork = NetworkMonitor.active
+     }
+ */
 
