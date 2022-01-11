@@ -11,7 +11,7 @@ import Network
 //https://magicmon.tistory.com/229
 
 public struct NetworkMonitor {
-    public static let monitor = NWPathMonitor()
+    private static let monitor = NWPathMonitor()
     public static var active  = false
     public static var expensive = false
     
@@ -22,6 +22,8 @@ public struct NetworkMonitor {
             
             NetworkMonitor.active = update.status == .satisfied ? true : false
             NetworkMonitor.expensive = update.isExpensive ? true : false
+            
+            Notification.default.post(name: Notification.Name.didNetworkChange, object: nil )
         }
         
         monitor.start(queue: DispatchQueue(label: "NetworkMonitor"))
