@@ -23,7 +23,7 @@ public struct NetworkMonitor {
             NetworkMonitor.active = update.status == .satisfied ? true : false
             NetworkMonitor.expensive = update.isExpensive ? true : false
             
-            Notification.default.post(name: Notification.Name.didNetworkChange, object: nil )
+            NotificationCenter.default.post(name: Notification.Name.didNetworkChange, object: nil )
         }
         
         monitor.start(queue: DispatchQueue(label: "NetworkMonitor"))
