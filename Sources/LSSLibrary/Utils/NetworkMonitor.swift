@@ -11,11 +11,11 @@ import Network
 //https://magicmon.tistory.com/229
 
 public struct NetworkMonitor {
-    private static let monitor = NWPathMonitor()
-    static var active  = false
-    static var expensive = false
+    public static let monitor = NWPathMonitor()
+    public static var active  = false
+    public static var expensive = false
     
-    static func start() {
+    public static func start() {
         guard monitor.pathUpdateHandler == nil else { return }
         
         monitor.pathUpdateHandler = { update in
@@ -27,7 +27,7 @@ public struct NetworkMonitor {
         monitor.start(queue: DispatchQueue(label: "NetworkMonitor"))
     }
     
-    static func stop() {
+    public static func stop() {
         guard monitor.pathUpdateHandler != nil else { return }
         monitor.cancel()
     }
