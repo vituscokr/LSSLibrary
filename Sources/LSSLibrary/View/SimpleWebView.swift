@@ -13,7 +13,7 @@ import WebKit
 public struct SimpleWebView: UIViewRepresentable {
    @State var urlRequest : URLRequest?
     
-    public init(_ urlRequest: URLRequest? = nil ) {
+    public init(_ urlRequest: State<URLRequest?> ) {
         self._urlRequest = urlRequest
     }
     
