@@ -14,7 +14,7 @@ public struct SimpleWebView: UIViewRepresentable {
    @State var urlRequest : URLRequest?
     
     public init(_ urlRequest: URLRequest? = nil ) {
-        self.urlRequest = urlRequest
+        self._urlRequest = urlRequest
     }
     
     public func makeUIView(context: Context) -> some UIView {
