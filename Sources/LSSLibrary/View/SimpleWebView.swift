@@ -13,6 +13,10 @@ import WebKit
 public struct SimpleWebView: UIViewRepresentable {
    @State var urlRequest : URLRequest?
     
+    public init(_ urlRequest: URLRequest? = nil ) {
+        self.urlRequest = urlRequest
+    }
+    
     public func makeUIView(context: Context) -> some UIView {
         let webView = WKWebView(frame:CGRect.zero)
         guard let request = urlRequest else {
