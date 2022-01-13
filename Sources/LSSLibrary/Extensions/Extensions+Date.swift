@@ -63,19 +63,19 @@ extension Date {
     }
 
     public var current10Minute : Date {
-        
-        let strMin = Date().string(type: .minute)
-        let tmpMin = Int(strMin)! % 10
-
-        
-        let adate = Date().addingTimeInterval((TimeInterval((10-tmpMin)*60)))
-        
-        let date = adate.string(type: .defaultExactFormat)
-        
-        let str = date + ":00"
-        
-        let d = str.date(type: .defaultConvertFormat)
-        
-        return d
+        return Date() 
+//        let strMin = Date().string(type: .minute)
+//        let tmpMin = Int(strMin)! % 10
+//
+//
+//        let adate = Date().addingTimeInterval((TimeInterval((10-tmpMin)*60)))
+//
+//        let date = adate.string(type: .defaultExactFormat)
+//
+//        let str = date + ":00"
+//
+//        let d = str.date(type: .defaultConvertFormat)
+//
+//        return d
     }
 }
