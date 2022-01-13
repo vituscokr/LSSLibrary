@@ -10,13 +10,13 @@ import Foundation
 
 
 
-open class Debug {
+public  class Debug {
     public enum DebugLineType {
         case signle
         case double
         case plus
     }
-    open class func line(type:Debug.DebugLineType){
+    public class func line(type:Debug.DebugLineType){
         #if DEBUG
         switch(type) {
         case .signle:
@@ -29,7 +29,7 @@ open class Debug {
         #else
         #endif
     }
-    open class func log(_ str:String) {
+    public class func log(_ str:String) {
         #if DEBUG
         print(str)
         #else
@@ -37,7 +37,7 @@ open class Debug {
     }
     
 
-    open class func log(_ object:Any) {
+    public class func log(_ object:Any) {
         #if DEBUG
             print(object)
         #else
