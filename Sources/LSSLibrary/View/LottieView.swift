@@ -11,9 +11,14 @@ import Lottie
 public struct LottieView : UIViewRepresentable {
     //json파일명을 받을 프로퍼티
     private var filename: String
-    
+
     //lottie View
     private var animationView = AnimationView()
+    
+    
+    public init(filename: String ) {
+        self.filename = filename
+    }
     
     //makeCoordinator를 구현하여 제약사항을 구현합니다.
    public func makeCoordinator() -> Coordinator {
