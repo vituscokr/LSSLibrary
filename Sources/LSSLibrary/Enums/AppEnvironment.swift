@@ -10,5 +10,5 @@ import Foundation
 public enum AppEnvironment {
     case develop
     case stage
-    case release
+    case production
 }

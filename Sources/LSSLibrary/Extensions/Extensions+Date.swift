@@ -8,35 +8,11 @@
 import Foundation
 import UIKit
 
-public enum MyDateStringFormat: String {
-    case defaultFormat = "yyyy-MM-dd"
-    case defaultConvertFormat = "yyyy-MM-dd  HH:mm:ss"
-    case defaultExactFormat = "yyyy-MM-dd  HH:mm"
-    case proposalDate = "yyyy-MM-dd, a h:mm" //신청일
-    case visitDate = "YYYY년 M월 d일 a h시"
-    case disturbDate = "HH:mm"
-    case chatTime = "a h:mm"
-    case minute = "m"
-    case hour = "HH"
-    case recepit = "yyyy.MM.dd"
-    case month = "MM"
-    case monthString = "YYYY년 MM월"
-    case dayWeek = "d일 (eee)"
-    case period = "M월 d일"
-    case year = "YYYY"
-    case monthOne = "M"
-    case day = "d"
-    case a = "YYYY-MM"
-    case b = "YYYY-MM-d"
-}
-
 extension Date {
     public var currentTimeStamp: Int64{
-        //return Int64(Date().timeIntervalSince1970 * 1000)
         return Int64(Date().timeIntervalSince1970 * 1000)
     }
     
-
     public func string(type:MyDateStringFormat) -> String {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = type.rawValue
@@ -44,12 +20,10 @@ extension Date {
             return dateFormatter.string(from: self)
     }
     
-    
     public var timestamp:Int64 {
         return Int64(self.timeIntervalSince1970 * 1000)
     }
-
-
+    
     public func startOfMonth() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
     }
