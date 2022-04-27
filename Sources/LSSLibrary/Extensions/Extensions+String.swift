@@ -81,7 +81,7 @@ extension String {
     public func stringDateFromTimestamp(ts: Int) -> String  {
         //날짜차이
         guard ts != 0 else { return "" }
-        let ct = Date.currentTimeStamp
+        let ct = Date().currentTimeStamp
         let diff = Int(ct) - ts
         if diff < 86400 {
             return "1일전"

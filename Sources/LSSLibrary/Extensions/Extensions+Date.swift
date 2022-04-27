@@ -13,6 +13,13 @@ extension Date {
         return Int64(Date().timeIntervalSince1970 * 1000)
     }
     
+    //timestamp 에서 데이트를 구함
+    public func getDate(from:Int)  -> Date {
+        return  Date(timeIntervalSince1970: TimeInterval(from / 1000))
+        
+    }
+    
+    
     public func string(type:MyDateStringFormat) -> String {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = type.rawValue
