@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RequestError :Error {
+public enum RequestError :Error {
     case requestNoSuccess
     case requestError(message:String)
     case requestFailError(error:Error)
