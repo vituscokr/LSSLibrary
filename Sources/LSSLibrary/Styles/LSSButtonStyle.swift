@@ -14,7 +14,7 @@ public struct LSSButtonStyle<Content>: ButtonStyle where Content: View {
         return change(configuration.isPressed)
     }
     
-    public init(change: (Bool)-> Content ){
+    public init(change: @escaping (Bool)-> Content ){
         self.change = change
     }
 }
