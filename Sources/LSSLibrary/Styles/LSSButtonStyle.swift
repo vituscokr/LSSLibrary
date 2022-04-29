@@ -13,4 +13,8 @@ public struct LSSButtonStyle<Content>: ButtonStyle where Content: View {
     public func makeBody(configuration: Configuration) -> some View {
         return change(configuration.isPressed)
     }
+    
+    public init(change: (Bool)-> Content ){
+        self.change = change
+    }
 }
