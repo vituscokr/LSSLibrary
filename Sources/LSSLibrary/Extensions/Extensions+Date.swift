@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension Date {
+    //milisecond 포함 
     public var currentTimeStamp: Int64{
         return Int64(Date().timeIntervalSince1970 * 1000)
     }

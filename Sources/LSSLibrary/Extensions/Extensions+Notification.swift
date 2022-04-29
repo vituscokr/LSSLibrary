@@ -10,4 +10,5 @@ import UIKit
 
 extension Notification.Name {
     public static let didNetworkChange = Notification.Name("didNetworkChange")
+    public static let didLoginChange = Notification.Name("didLoginChange")
 }
