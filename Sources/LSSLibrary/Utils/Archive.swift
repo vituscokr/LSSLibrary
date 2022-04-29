@@ -45,7 +45,7 @@ public class Archive {
     }
 
     
-    public class func remove(filenamne: String) {
+    public class func remove(filename: String) {
         let fileManager = FileManager.default
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
