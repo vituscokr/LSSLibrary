@@ -203,3 +203,85 @@ extension UITextField {
     //   onFocus: onError:
 }
 */
+
+
+/*
+ 
+ extension UITextField {
+     
+     func setLeftPaddingImageView(named:String) {
+         let paddingLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 48.0, height: self.frame.size.height))
+         let imageView = UIImageView(frame: CGRect(x: 8, y: (self.frame.size.height - 24) / 2  , width: 24, height: 24))
+         imageView.image = UIImage(named: named)
+         paddingLeftView.addSubview(imageView)
+         self.leftView = paddingLeftView
+         self.leftViewMode = .always
+     }
+     
+     func setRightPaddingButton(named:String , buttonTarget:Any?, buttonAction:Selector ) {
+         let paddingRightView = UIView(frame: CGRect(x: 0, y: 0, width: 48.0, height: self.frame.size.height))
+         let button = UIButton(frame: CGRect(x: 8, y: (self.frame.size.height - 24) / 2  , width: 24, height: 24))
+         button.addTarget(buttonTarget , action: buttonAction, for: .touchUpInside)
+         button.setImage(UIImage(named: named), for: .normal)
+         button.tag = 100
+         paddingRightView.addSubview(button)
+         self.rightView = paddingRightView
+         self.rightViewMode = .always
+     }
+     
+     func setRightImage(named:String  ) {
+         let paddingRightView = UIView(frame: CGRect(x: 0, y: 0, width: 48.0, height: self.frame.size.height))
+         let button = UIImageView(frame: CGRect(x: 8, y: (self.frame.size.height - 32) / 2  , width: 32, height: 32))
+
+         button.image = UIImage(named: named)
+         
+         paddingRightView.addSubview(button)
+         self.rightView = paddingRightView
+         self.rightViewMode = .always
+     }
+     
+     func setRightImage16(named:String  ) {
+         let paddingRightView = UIView(frame: CGRect(x: 0, y: 0, width: 16.0, height: self.frame.size.height))
+         let button = UIImageView(frame: CGRect(x: 0, y: (self.frame.size.height - 16) / 2  , width: 16, height: 16))
+
+         button.image = UIImage(named: named)
+         
+         paddingRightView.addSubview(button)
+         self.rightView = paddingRightView
+         self.rightViewMode = .always
+     }
+     
+     
+     
+     func setRightClearButton() {
+         let paddingRightView = UIView(frame: CGRect(x: 0, y: 0, width: 48.0, height: self.frame.size.height))
+         let button = UIButton(frame: CGRect(x: 8, y: (self.frame.size.height - 24) / 2  , width: 16, height: 16))
+         button.addTarget(self , action: #selector(clearTextField), for: .touchUpInside)
+         button.setImage(UIImage(named: "clear"), for: .normal)
+         paddingRightView.addSubview(button)
+         self.rightView = paddingRightView
+         self.rightViewMode = .whileEditing
+     }
+     @objc func clearTextField() {
+         self.text = ""
+         
+     }
+     
+     func setRightTextButton(title:String , buttonTarget:Any?, buttonAction:Selector ) {
+         let paddingRightView = UIView(frame: CGRect(x: 0, y: 0, width: 50.0, height: self.frame.size.height))
+         let button = UIButton(frame: CGRect(x: 8, y: (self.frame.size.height - 24) / 2  , width: 50, height: 24))
+         button.titleLabel!.font = UIFont.systemFont(ofSize: 16)
+         button.setTitleColor(UIColor.mainpink, for: .normal)
+         button.addTarget(buttonTarget , action: buttonAction, for: .touchUpInside)
+         button.setTitle(title, for: .normal)
+         paddingRightView.addSubview(button)
+         self.rightView = paddingRightView
+         self.rightViewMode = .always
+     }
+ }
+
+
+
+
+
+ */
