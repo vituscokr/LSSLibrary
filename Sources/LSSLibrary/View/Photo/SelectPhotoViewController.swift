@@ -15,7 +15,11 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
     
     public var viewController : TLPhotosPickerViewController?
     public init() {
-        super.init()
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     public override func viewDidLoad() {
@@ -25,7 +29,7 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
         self.viewController = TLPhotosPickerViewController()
         
         
-        self.view.addSubview(self.viewController.view )
+        self.view.addSubview(self.viewController?.view ?? UIView()  )
         
        // setup()
         
