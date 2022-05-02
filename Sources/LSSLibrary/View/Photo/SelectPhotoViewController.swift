@@ -16,7 +16,7 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
     public var viewController : TLPhotosPickerViewController?
 
     convenience init() {
-        super.init()
+        super.init(nibName: nil, bundle: nil)
         
     }
     
