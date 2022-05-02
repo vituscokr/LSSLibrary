@@ -8,17 +8,17 @@
 import SwiftUI
 import TLPhotoPicker
 
-struct PhotoPickerView: UIViewControllerRepresentable {
+public struct PhotoPickerView: UIViewControllerRepresentable {
 
     
     
-    func makeUIViewController(context: Context) -> some UIViewController {
+    public func makeUIViewController(context: Context) -> some UIViewController {
         
         let vc = SelectPhotoViewController()
         return vc 
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
 }
