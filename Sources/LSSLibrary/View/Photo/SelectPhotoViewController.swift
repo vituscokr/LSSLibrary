@@ -25,7 +25,7 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
         self.viewController = TLPhotosPickerViewController()
         
         
-        guard let view = self.viewController.view else {
+        guard let view = self.viewController?.view else {
             return
         }
         
@@ -35,7 +35,7 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
         view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         
         
-        self.view.addSubview(self.viewController?.view ?? UIView()  )
+        self.view.addSubview(view  )
         
        // setup()
         
