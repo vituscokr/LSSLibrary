@@ -11,7 +11,7 @@ import SwiftyJSON
 
 public class Archive {
     
-    class func save(filename: String, data: JSON) {
+    public class func save(filename: String, data: JSON) {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
         let dataFilePath = docsDir.appendingPathComponent(filename )
@@ -23,7 +23,7 @@ public class Archive {
         }
     }
     
-    class func read(filename: String) -> JSON?  {
+    public class func read(filename: String) -> JSON?  {
         let fileManager = FileManager.default
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
@@ -45,7 +45,7 @@ public class Archive {
     }
 
     
-    class func remove(filenamne: String) {
+    public class func remove(filename: String) {
         let fileManager = FileManager.default
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
