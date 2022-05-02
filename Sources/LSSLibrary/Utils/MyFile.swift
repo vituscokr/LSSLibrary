@@ -11,7 +11,7 @@ import Foundation
 public class MyFile {
     var filename : String
     let fileManager = FileManager.default
-    var dataPath :String {
+    public var dataPath :String {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPath[0] as NSString
         let dataPath = docsDir.appendingPathComponent("temp") as NSString
@@ -19,7 +19,7 @@ public class MyFile {
     }
     
     
-    var filePath : String {
+    public var filePath : String {
         return (dataPath as NSString).appendingPathComponent(filename)
     }
     
