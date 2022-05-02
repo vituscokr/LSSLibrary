@@ -14,6 +14,9 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
     
     
     public var viewController : TLPhotosPickerViewController?
+    public init() {
+        super.init()
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()

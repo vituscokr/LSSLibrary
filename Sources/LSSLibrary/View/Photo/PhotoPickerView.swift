@@ -10,7 +10,9 @@ import TLPhotoPicker
 
 public struct PhotoPickerView: UIViewControllerRepresentable {
 
-    
+    public init() {
+        
+    }
     
     public func makeUIViewController(context: Context) -> some UIViewController {
         
