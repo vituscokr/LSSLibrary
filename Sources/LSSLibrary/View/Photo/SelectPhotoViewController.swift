@@ -10,11 +10,7 @@ import UIKit
 import TLPhotoPicker
 
 public class SelectPhotoViewController : UIViewController, UINavigationControllerDelegate {
-    
-    
-    
     public var viewController : TLPhotosPickerViewController?
-
     public init() {
         super.init(nibName: nil, bundle: nil)
         
@@ -26,9 +22,17 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.viewController = TLPhotosPickerViewController()
+        
+        
+        guard let view = self.viewController.view else {
+            return
+        }
+        
+        view.topAnchor.constraint(equalTo: self.view.topAnchor)
+        view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
+        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         
         
         self.view.addSubview(self.viewController?.view ?? UIView()  )
