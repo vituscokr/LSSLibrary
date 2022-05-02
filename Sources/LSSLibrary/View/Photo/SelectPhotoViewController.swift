@@ -14,8 +14,10 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
     
     
     public var viewController : TLPhotosPickerViewController?
-    public init() {
 
+    convenience init() {
+        self.init()
+        
     }
     
     required init?(coder: NSCoder) {

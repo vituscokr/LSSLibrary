@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-public extension Color {
-    public init(hexString: String) {
+ extension Color {
+     init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
         Scanner(string: hex).scanHexInt64(&int)
@@ -27,9 +27,9 @@ public extension Color {
         self.init(red: Double(r) / 255, green: Double(g) / 255, blue: Double(b) / 255, opacity: Double(a) / 255)
     }
 }
-public extension Color {
+ extension Color {
  
-    public func uiColor() -> UIColor {
+     func uiColor() -> UIColor {
 
         if #available(iOS 14.0, *) {
             return UIColor(self)
