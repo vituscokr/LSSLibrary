@@ -33,7 +33,7 @@ public class SelectPhotoViewController : UIViewController, UINavigationControlle
         view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
         view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        
+        self.viewController?.collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         
         self.view.addSubview(view  )
         
