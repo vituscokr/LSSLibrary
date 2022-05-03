@@ -13,7 +13,7 @@ public class PhotoPickerViewDelegate : UIViewController , UINavigationController
     public init() {
         
     }
-    public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         
     }
 }
