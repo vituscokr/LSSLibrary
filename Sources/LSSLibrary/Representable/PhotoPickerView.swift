@@ -14,10 +14,10 @@ import TLPhotoPicker
 public struct PhotoPikcerView : UIViewControllerRepresentable{
     
     public var configure : TLPhotosPickerConfigure
-    public var delegate : TLPhotosPickerViewControllerDelegate
+    public var delegate : TLPhotosPickerViewControllerDelegate?
     
     public init(configure: TLPhotosPickerConfigure = TLPhotosPickerConfigure() ,
-                delegate: TLPhotosPickerViewControllerDelegate = TLPhotosPickerViewControllerDelegate()) {
+                delegate: TLPhotosPickerViewControllerDelegate = nil) {
         
         self.configure = configure
         self.delegate = delegate
