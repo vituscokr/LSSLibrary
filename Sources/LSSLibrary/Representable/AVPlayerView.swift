@@ -21,6 +21,7 @@ public struct AVPlayerView: UIViewControllerRepresentable {
     public func makeUIViewController(context: Context) -> some UIViewController {
         let controller = AVPlayerViewController()
         controller.player = player
+        controller.modalPresentationStyle = .fullScreen
         controller.showsPlaybackControls = showController
         return controller
     }
