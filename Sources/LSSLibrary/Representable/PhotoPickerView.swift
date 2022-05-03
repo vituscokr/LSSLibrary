@@ -27,6 +27,7 @@ public struct PhotoPikcerView : UIViewControllerRepresentable{
         let vc = TLPhotosPickerViewController()
         vc.configure = configure
         vc.delegate = delegate
+        return vc 
     }
     public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
