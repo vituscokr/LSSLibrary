@@ -17,7 +17,7 @@ public struct PhotoPikcerView : UIViewControllerRepresentable{
     public var delegate : TLPhotosPickerViewControllerDelegate
     
     public init(configure: TLPhotosPickerConfigure = TLPhotosPickerConfigure() ,
-                delegate: TLPhotosPickerViewControllerDelegate = PhotoPickerViewDelegate()) {
+                delegate: TLPhotosPickerViewControllerDelegate = TLPhotosPickerViewControllerDelegate()) {
         
         self.configure = configure
         self.delegate = delegate
