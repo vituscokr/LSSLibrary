@@ -10,13 +10,11 @@ import UIKit
 import TLPhotoPicker
 
 public class PhotoPickerViewDelegate : UIViewController , UINavigationControllerDelegate {
-    
     public init() {
         
     }
 }
 
-
-//extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
-//    
-//}
+extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
+    
+}
