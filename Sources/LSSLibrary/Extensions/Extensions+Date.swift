@@ -41,8 +41,20 @@ extension Date {
     }
     
     public func preMonth() -> Date {
-        return Calendar.current.date(byAdding: DateComponents(month:-1) , to: Date())!
+        return Calendar.current.date(byAdding: DateComponents(month:-1) , to: self)!
     }
+    public func nextMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month:1) , to: self)!
+    }
+    
+    public func preYear() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(year:-1) , to: self)!
+    }
+    
+    public func nextYear() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(year:1) , to: self)!
+    }
+    
 
     public var current10Minute : Date {
         return Date() 
