@@ -13,6 +13,9 @@ public class PhotoPickerViewDelegate : UIViewController , UINavigationController
     public init() {
         
     }
+    public init?(coder: NSCoder) {
+        
+    }
 }
 
 extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
