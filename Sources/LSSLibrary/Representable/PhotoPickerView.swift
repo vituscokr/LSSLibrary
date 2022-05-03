@@ -11,7 +11,7 @@ import SwiftUI
 import TLPhotoPicker
 
 
-public struct PohotoPikcerView : UIViewControllerRepresentable{
+public struct PhotoPikcerView : UIViewControllerRepresentable{
     
     public var configure : TLPhotosPickerConfigure = TLPhotosPickerConfigure()
     public var delegate : TLPhotosPickerViewControllerDelegate?
