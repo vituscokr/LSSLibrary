@@ -18,6 +18,6 @@ public class PhotoPickerViewDelegate : UIViewController , UINavigationController
     }
 }
 
-extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
+open extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
     
 }
