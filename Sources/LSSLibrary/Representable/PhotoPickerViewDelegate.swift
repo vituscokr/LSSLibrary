@@ -17,7 +17,6 @@ public class PhotoPickerViewDelegate : UIViewController , UINavigationController
         super.init(nibName: nil, bundle: nil)
     }
 }
-
-open extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
+public extension PhotoPickerViewDelegate : TLPhotosPickerViewControllerDelegate {
     
 }
