@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-
-
-//extension NSMutableAttributedString {
+// extension NSMutableAttributedString {
 //
 //    func bold(string: String, fontSize: CGFloat) -> NSMutableAttributedString {
 //        let font = UIFont.boldSystemFont(ofSize: fontSize)
@@ -25,10 +23,13 @@ import UIKit
 //        return self
 //    }
 //    
-//    func accent(string:String, fontSize: CGFloat , weight: UIFont.Weight , color : UIColor ) -> NSMutableAttributedString {
+//    func accent(string: String,
+//                fontSize: CGFloat,
+//                weight: UIFont.Weight,
+//                color : UIColor ) -> NSMutableAttributedString {
 //        let font = UIFont.systemFont(ofSize: fontSize, weight: weight)
 //        let attributes : [NSAttributedString.Key: Any] = [.font: font , .foregroundColor : color ]
 //        self.append(NSMutableAttributedString(string: string, attributes: attributes))
 //        return self
 //    }
-//}
+// }

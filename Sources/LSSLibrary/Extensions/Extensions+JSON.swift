@@ -6,19 +6,19 @@
 //
 
 import Foundation
-import SwiftyJSON
-extension JSON{
-    public mutating func appendIfArray(json:JSON){
-        if var arr = self.array{
-            arr.append(json)
-            self = JSON(arr);
-        }
-    }
-    
-    public mutating func appendIfDictionary(key:String,json:JSON){
-        if var dict = self.dictionary{
-            dict[key] = json;
-            self = JSON(dict);
-        }
-    }
-}
+//import SwiftyJSON
+//extension JSON{
+//    public mutating func appendIfArray(json:JSON){
+//        if var arr = self.array{
+//            arr.append(json)
+//            self = JSON(arr);
+//        }
+//    }
+//    
+//    public mutating func appendIfDictionary(key:String,json:JSON){
+//        if var dict = self.dictionary{
+//            dict[key] = json;
+//            self = JSON(dict);
+//        }
+//    }
+//}

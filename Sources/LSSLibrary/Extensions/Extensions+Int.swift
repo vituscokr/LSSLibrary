@@ -9,19 +9,16 @@ import Foundation
 
 extension Int {
     public func decimalStyle() -> String {
-        let numFormatter : NumberFormatter = NumberFormatter();
+        let numFormatter: NumberFormatter = NumberFormatter()
         numFormatter.numberStyle = NumberFormatter.Style.decimal
-        return numFormatter.string(from: NSNumber(integerLiteral: self))!
+        let number = NSNumber(value: self)
+        return numFormatter.string(from: number)!
     }
-    
-    public var vat : Int {
+    public var vat: Int {
         return  Int(Float(self) - floor( Float(self) / 1.1))
     }
-    
-    ///timestamp 에서 데이트를 구함
+    /// timestamp 에서 데이트를 구함
     public var date: Date {
         return  Date(timeIntervalSince1970: TimeInterval(self / 1000))
-        
     }
-    
 }

@@ -7,8 +7,9 @@
 
 import Foundation
 
-public enum RequestError :Error {
+/// 리퀘스트에 대한 에러 열거입니다. 
+public enum RequestError: Error {
     case requestNoSuccess
-    case requestError(message:String)
-    case requestFailError(error:Error)
+    case requestError(message: String)
+    case requestFailError(error: Error)
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public enum MyDateStringFormat: String {
     case iso8601 = "YYYY-MM-DDTHH:mm:ss.sssZ"
     case defaultFormat = "yyyy-MM-dd"
@@ -27,6 +26,6 @@ public enum MyDateStringFormat: String {
     case year = "YYYY"
     case monthOne = "M"
     case day = "d"
-    case a = "YYYY-MM"
-    case b = "YYYY-MM-d"
+    case yearMonth2 = "YYYY-MM"
+    case yearMonth2Day1 = "YYYY-MM-d"
 }

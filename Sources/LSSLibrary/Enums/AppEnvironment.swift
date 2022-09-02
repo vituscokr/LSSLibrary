@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 앱 환경 설정에 대한 열거형 변수입니다.
 public enum AppEnvironment {
     case develop
     case stage

@@ -8,10 +8,8 @@
 import Foundation
 import AVKit
 
-
 extension AVPlayer {
-    
-    public var duration : String {
+    public var duration: String {
         guard let duration: CMTime = self.currentItem?.asset.duration else {
             return ""
         }

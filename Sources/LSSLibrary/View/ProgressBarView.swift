@@ -5,45 +5,45 @@
 //  Created by app_ios on 2020/04/10.
 //  Copyright © 2020 vitus. All rights reserved.
 //
-//참고 https://medium.com/@ashikabala01/creating-custom-progress-bar-in-ios-using-swift-c662525b6ed
-//참고 https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
+// 참고 https://medium.com/@ashikabala01/creating-custom-progress-bar-in-ios-using-swift-c662525b6ed
+// 참고 https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
 
 import SwiftUI
 
 @available(iOS 13, * )
 public struct ProgressBarViewConfig {
-    public var value:Float = 0.0
-    var bgColor:Color = Color.gray
-    var fillColor:Color = Color.red
-    
-    public init(value:Float, bgColor:Color, fillColor:Color ) {
+    public var value: Float = 0.0
+    var bgColor: Color = Color.gray
+    var fillColor: Color = Color.red
+    public init(value: Float, bgColor: Color, fillColor: Color ) {
         self.value = value
         self.bgColor = bgColor
         self.fillColor = fillColor
     }
-    
 }
 @available(iOS 13, * )
 public struct ProgressBarView: View {
-
-    @Binding var config:ProgressBarViewConfig
-    
-    public init(config:Binding<ProgressBarViewConfig>) {
+    @Binding var config: ProgressBarViewConfig
+    public init(config: Binding<ProgressBarViewConfig>) {
         self._config = config
     }
     public var body: some View {
         GeometryReader { geometry in
             ZStack {
-                //밑의 원
+                // 밑의 원
                 Circle()
                     .fill(Color.clear)
                 .overlay(
                     Circle()
                         .stroke(self.config.bgColor, lineWidth: 10)
                 )
-                //위의 원
+                // 위의 원
                 Path { path in
-                    path.addArc(center: CGPoint(x:geometry.size.width * 0.5, y: geometry.size.height * 0.5), radius: geometry.size.width * 0.5, startAngle: .degrees(-90), endAngle: .degrees(-90 + ( Double(self.config.value) * 360)), clockwise: false)
+                    path.addArc(center: CGPoint(x:geometry.size.width * 0.5, y: geometry.size.height * 0.5),
+                                radius: geometry.size.width * 0.5,
+                                startAngle: .degrees(-90),
+                                endAngle: .degrees(-90 + ( Double(self.config.value) * 360)),
+                                clockwise: false)
                     _ = path.strokedPath(.init(lineWidth: 3, lineCap: .round, lineJoin: .round, miterLimit: 10, dash: [5,3], dashPhase: 10))
                 }
                 .stroke(self.config.fillColor, lineWidth: 10)

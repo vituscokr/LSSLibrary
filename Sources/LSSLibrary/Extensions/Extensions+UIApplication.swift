@@ -7,11 +7,8 @@
 
 import Foundation
 import UIKit
-
-
-//사용예
-//UIApplication.shared.endEditing()
-
+// 사용예
+// UIApplication.shared.endEditing()
 extension UIApplication {
     public func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

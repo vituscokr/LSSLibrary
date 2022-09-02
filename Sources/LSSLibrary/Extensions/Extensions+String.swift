@@ -9,40 +9,37 @@ import Foundation
 
 /// 정규식 관련 확장
 extension String {
-    
     public var isEmail: Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
-    
     public var isAlphanumeric: Bool {
         return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
     }
-    
-    public var isNumber :Bool {
+    public var isNumber: Bool {
         return !isEmpty && range(of: "[^0-9]", options: .regularExpression) == nil
     }
 }
 
-///Y or N 관련 확장 선언문
+/// Y or N 관련 확장 선언문
 /// Bool 의 YorNString  참조
 extension String {
-    public var boolValueYorN :Bool {
+    public var boolValueYorN: Bool {
         if self == "Y" {
             return true
-        }else {
+        } else {
             return false
         }
     }
 }
 
-///문자열 길이 관련 확장
+/// 문자열 길이 관련 확장
 extension String {
-    public func checkLength(min:Int, max:Int ) -> Bool {
-        if(self.count >= min && self.count <= max ) {
+    public func checkLength(min: Int, max: Int ) -> Bool {
+        if self.count >= min && self.count <= max {
             return true
-        }else {
+        } else {
             return false
         }
     }
@@ -61,49 +58,45 @@ extension String {
 //        }
 //        return  formatter.date(from: self)!
 //    }
-    
-
-///날짜 관련 확장
+/// 날짜 관련 확장
 extension String {
-    public func date(type:MyDateStringFormat)-> Date{
+    public func date(type: MyDateStringFormat) -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = type.rawValue
         formatter.locale = Locale(identifier: "ko_KR")
         return  formatter.date(from: self)!
     }
-    
     public var iso8601: Date {
-        let dateFormatter = ISO8601DateFormatter() //2022-04-04T05:19:26.723Z
+        let dateFormatter = ISO8601DateFormatter() // 2022-04-04T05:19:26.723Z
         dateFormatter.formatOptions.insert(.withFractionalSeconds)
         return dateFormatter.date(from: self)!
     }
 
-    public func stringDateFromTimestamp(ts: Int) -> String  {
-        //날짜차이
-        guard ts != 0 else { return "" }
-        let ct = Date().currentTimeStamp
-        let diff = Int(ct) - ts
+    public func stringDateFromTimestamp(timestamp: Int) -> String {
+        // 날짜차이
+        guard timestamp != 0 else { return "" }
+        let currentTimestamp = Date().currentTimeStamp
+        let diff = Int(currentTimestamp) - timestamp
         if diff < 86400 {
             return "1일전"
-        }else if diff < 86400 * 2 {
+        } else if diff < 86400 * 2 {
             return "2일전"
-        }else if diff < 86400 * 3 {
+        } else if diff < 86400 * 3 {
             return "3일전"
-        }else if diff < 86400 * 4 {
+        } else if diff < 86400 * 4 {
             return "4일전"
-        }else if diff < 86400 * 5 {
+        } else if diff < 86400 * 5 {
             return "5일전"
-        }else if diff < 86400 * 6 {
+        } else if diff < 86400 * 6 {
             return "6일전"
-        }else if diff < 86400 * 7 {
+        } else if diff < 86400 * 7 {
             return "7일전"
         }
-        return Date().getDate(from: ts).string(type: .defaultFormat)
+        return Date().getDate(from: timestamp).string(type: .defaultFormat)
     }
 
 }
-
-///HTML   관련 확장 클래스
+/// HTML   관련 확장 클래스
 extension String {
     public var htmlToAttributedString: NSMutableAttributedString? {
        guard let data = data(using: .utf8) else { return nil }
@@ -115,8 +108,8 @@ extension String {
                                             ],
                                          documentAttributes: nil)
        } catch let error as NSError {
-           let  _ =  error.localizedDescription
-           
+           let err =   error.localizedDescription
+           print(err)
           // print(error.localizedDescription)
            return  nil
        }
