@@ -7,42 +7,26 @@
 
 import SwiftUI
 
-//public struct UnderlinedTextFieldStyle : TextFieldStyle {
-//    public func _body(configuration: TextField<Self._Label>) -> some View {
-//      configuration
-//        .padding(7)
-//        .background(
-//          RoundedRectangle(cornerRadius: 5)
-//            .strokeBorder(Color.black, lineWidth: 1)
-//      )
-//    }
-//}
-
-
 @available(iOS 13, * )
 public struct TextFieldWithUnderline: View {
 
-    
     @State private var text: String = ""
-    var placeholder:String
-    var onFousLineColor:Color = .red
-    var lineColor:Color = .gray
-    let lineHeight : CGFloat = 1.0
-    @State private var dividerColor:Color = .gray
-    
-    public init(placeholder :String = "", lineColor:Color = .gray, onFocusLineColor:Color = .red) {
+    var placeholder: String
+    var onFousLineColor: Color = .red
+    var lineColor: Color = .gray
+    let lineHeight: CGFloat = 1.0
+    @State private var dividerColor: Color = .gray
+    public init(placeholder: String = "", lineColor: Color = .gray, onFocusLineColor: Color = .red) {
         self.placeholder = placeholder
         self.lineColor = lineColor
         self.onFousLineColor = onFocusLineColor
     }
-    
     public var body: some View {
- 
         VStack {
-            TextField(placeholder, text:$text , onEditingChanged: { changed in
+            TextField(placeholder, text: $text, onEditingChanged: { changed in
                 if changed {
                     self.changed()
-                }else {
+                } else {
                     self.committed()
                 }
             })
@@ -72,4 +56,3 @@ struct UnderlineTextField_Previews: PreviewProvider {
     }
 }
 #endif
-

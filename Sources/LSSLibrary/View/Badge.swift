@@ -6,24 +6,24 @@
 //
 import SwiftUI
 
-public struct Badge<T:View> : View {
-    let isPresented : Bool
-    let content : T
-    let color : Color
-    public init(isPresented: Bool, color : Color, @ViewBuilder content:() -> T) {
+@available(iOS 13.0, *)
+public struct Badge<T: View>: View {
+    let isPresented: Bool
+    let content: T
+    let color: Color
+    public init(isPresented: Bool, color: Color, @ViewBuilder content: () -> T) {
         self.isPresented = isPresented
         self.color = color
         self.content = content()
     }
-    
-    public var body : some View {
+    public var body: some View {
         ZStack(alignment: .topTrailing) {
             content
             if isPresented {
                 Circle()
                     .foregroundColor(color)
                     .frame(width: 5, height: 5, alignment: .trailing)
-                    .padding(EdgeInsets(top: 0, leading:0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
         }
     }

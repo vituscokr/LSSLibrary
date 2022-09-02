@@ -6,27 +6,23 @@
 //
 
 import SwiftUI
-
-
+@available(iOS 13.0, *)
 public struct LineView: View {
     private let color: Color
     private let height: CGFloat
     public init(
-        color: Color = Color.gray ,
-        height : CGFloat = 1
-    )  {
+        color: Color = Color.gray,
+        height: CGFloat = 1
+    ) {
         self.color = color
         self.height = height
     }
     public var body: some View {
            Rectangle()
             .foregroundColor(color)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: height , maxHeight: height)
-        
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: height, maxHeight: height)
     }
 }
-
-
  /*
   사용예시
   import SwiftUI

@@ -10,11 +10,12 @@ import AVKit
 import UIKit
 import SwiftUI
 
+@available(iOS 13.0, *)
 public struct AVPlayerView: UIViewControllerRepresentable {
     private var player: AVPlayer
-    private var showController : Bool
+    private var showController: Bool
 
-    public init(player: AVPlayer , showController: Bool = false ) {
+    public init(player: AVPlayer, showController: Bool = false ) {
         self.player = player
         self.showController = showController
     }
@@ -26,6 +27,5 @@ public struct AVPlayerView: UIViewControllerRepresentable {
         return controller
     }
     public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
     }
 }

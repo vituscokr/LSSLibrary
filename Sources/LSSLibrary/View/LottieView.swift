@@ -4,9 +4,8 @@
 //
 //  Created by Gyeongtae Nam on 2022/04/21.
 //
-
-import SwiftUI 
-//import Lottie
+import SwiftUI
+// import Lottie
 
 /*
 public struct LottieView : UIViewRepresentable {

@@ -10,15 +10,14 @@ import UIKit
 import SwiftUI
 import WebKit
 
+@available(iOS 13.0, *)
 public struct SimpleWebView: UIViewRepresentable {
-   @State var urlRequest : URLRequest?
-    
+   @State var urlRequest: URLRequest?
     public init(_ urlRequest: State<URLRequest?> ) {
         self._urlRequest = urlRequest
     }
-    
     public func makeUIView(context: Context) -> some UIView {
-        let webView = WKWebView(frame:CGRect.zero)
+        let webView = WKWebView(frame: CGRect.zero)
         guard let request = urlRequest else {
             return webView
         }
@@ -26,6 +25,5 @@ public struct SimpleWebView: UIViewRepresentable {
         return webView
     }
     public func updateUIView(_ uiView: UIViewType, context: Context) {
-        
     }
 }

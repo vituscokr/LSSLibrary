@@ -6,11 +6,3 @@
 //
 
 import Foundation
-
-
-
-//protocol KeyboardProtocol  {
-//    func addKeyboradNotification()
-//    func keyboardWillShow(_ noti:NSNotification)
-//    func keyboardWillHide(_ noti:NSNotification)
-//}

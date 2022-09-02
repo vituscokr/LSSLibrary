@@ -39,12 +39,16 @@ public struct ProgressBarView: View {
                 )
                 // 위의 원
                 Path { path in
-                    path.addArc(center: CGPoint(x:geometry.size.width * 0.5, y: geometry.size.height * 0.5),
+                    path.addArc(center: CGPoint(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5),
                                 radius: geometry.size.width * 0.5,
                                 startAngle: .degrees(-90),
                                 endAngle: .degrees(-90 + ( Double(self.config.value) * 360)),
                                 clockwise: false)
-                    _ = path.strokedPath(.init(lineWidth: 3, lineCap: .round, lineJoin: .round, miterLimit: 10, dash: [5,3], dashPhase: 10))
+                    _ = path.strokedPath(.init(lineWidth: 3,
+                                               lineCap: .round,
+                                               lineJoin: .round,
+                                               miterLimit: 10,
+                                               dash: [5, 3], dashPhase: 10))
                 }
                 .stroke(self.config.fillColor, lineWidth: 10)
             }
@@ -55,19 +59,16 @@ public struct ProgressBarView: View {
 #if DEBUG
 @available(iOS 13, * )
 struct ProgressBarView_Previews: PreviewProvider {
-    @State static var progressBarViewConfig: ProgressBarViewConfig = ProgressBarViewConfig(value: 0.5, bgColor: .green, fillColor: .yellow)
+    @State static var progressBarViewConfig = ProgressBarViewConfig(value: 0.5, bgColor: .green, fillColor: .yellow)
     static var previews: some View {
         ProgressBarView(config: $progressBarViewConfig)
     }
 }
 #endif
 
-
 /*
  테스트
  */
-
-
 /*
 
 struct ContentView: View {

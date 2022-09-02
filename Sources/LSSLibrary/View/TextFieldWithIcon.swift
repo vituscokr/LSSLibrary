@@ -11,20 +11,17 @@ import SwiftUI
 public struct TextFieldWithIcon: View {
 
     @State private var text: String = ""
-    var placeholder:String
-    
-    public init(placeholder :String = "") {
+    var placeholder: String
+    public init(placeholder: String = "") {
         self.placeholder = placeholder
     }
-    
-    
     public var body: some View {
         HStack {
             Image(systemName: "lock")
-            TextField(placeholder, text:$text , onEditingChanged: { changed in
+            TextField(placeholder, text: $text, onEditingChanged: { changed in
                 if changed {
                     self.changed()
-                }else {
+                } else {
                     self.committed()
                 }
             })
@@ -32,13 +29,11 @@ public struct TextFieldWithIcon: View {
 //            .font(Font.custom("Papyrus", size: 16))
         }
         .padding()
-        //.overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(Color.black))
+        // .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(Color.black))
     }
     func changed() {
-        
     }
     func committed() {
-        
     }
 }
 #if DEBUG
