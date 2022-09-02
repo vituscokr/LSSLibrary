@@ -4,6 +4,5 @@
 
 22년 6월 3일 : webhook 설정 테스트 수정 
 
+22년 9월 2일 : Swiftlint 삽질 하기 
 
-x-xcode-log://AC9279F5-69F9-440A-BD78-B85E91FC4BD7 error project: Source files for target SwiftLintPlugin should be located under 'Plugins/SwiftLintPlugin', or a custom sources path can be set with the 'path' property in Package.swift
-x-xcode-log://9617D068-E0BB-472C-91A6-658453BCE87C error project: Source files for target SwiftLintPlugin should be located under 'Plugins/SwiftLintPlugin', or a custom sources path can be set with the 'path' property in Package.swift
