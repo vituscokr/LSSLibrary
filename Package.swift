@@ -22,23 +22,25 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-        .binaryTarget(
-            name: "SwiftLintBinary",
-            url:
-                "https://github.com/realm/SwiftLint/releases/download/0.49.1/SwiftLintBinary-macos.artifactbundle.zip",
-            checksum: "227258fdb2f920f8ce90d4f08d019e1b0db5a4ad2090afa012fd7c2c91716df3"
-        ),
-        .plugin(
-            name: "SwiftLintPlugin",
-            capability: .buildTool(),
-            dependencies: ["SwiftLintBinary"]
-        ),
+//        .binaryTarget(
+//            name: "SwiftLintBinary",
+//            url:
+//                "https://github.com/realm/SwiftLint/releases/download/0.49.1/SwiftLintBinary-macos.artifactbundle.zip",
+//            checksum: "227258fdb2f920f8ce90d4f08d019e1b0db5a4ad2090afa012fd7c2c91716df3"
+//        ),
+//        .plugin(
+//            name: "SwiftLintPlugin",
+//            capability: .buildTool(),
+//            dependencies: ["SwiftLintBinary"]
+//        ),
         .target(
             name: "LSSLibrary",
             dependencies: [
 //                "Alamofire",
 //                .product(name: "KingfisherSwiftUI", package: "Kingfisher"),
-            ]),
+            ]
+        ),
+            
         .testTarget(
             name: "LSSLibraryTests",
             dependencies: ["LSSLibrary"]),
