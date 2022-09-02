@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+//import KingfisherSwiftUI
 
 
 public struct Thumb {
@@ -46,11 +46,11 @@ public struct PhotoWithBottomDescriptionView: View {
                  .cornerRadius(15)
                  
             }else {
-                KFImage(thumb.url)
-                 .resizable()
-                     .frame(width:400, height:400)
-                    .aspectRatio(contentMode: .fill)
-                 .cornerRadius(15)
+//                KFImage(thumb.url)
+//                 .resizable()
+//                     .frame(width:400, height:400)
+//                    .aspectRatio(contentMode: .fill)
+//                 .cornerRadius(15)
                  
             }
 

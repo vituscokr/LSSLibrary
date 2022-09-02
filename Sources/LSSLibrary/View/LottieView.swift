@@ -6,8 +6,9 @@
 //
 
 import SwiftUI 
-import Lottie
+//import Lottie
 
+/*
 public struct LottieView : UIViewRepresentable {
     ///json파일명을 받을 프로퍼티
     private var filename: String
@@ -59,3 +60,4 @@ public struct LottieView : UIViewRepresentable {
         
     }
 }
+*/

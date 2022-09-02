@@ -7,10 +7,8 @@
 
 import Foundation
 
-
-
 extension Bool {
-    public var YorNString : String {
+    public var stringYorN: String {
         return self ? "Y": "N"
     }
 }
