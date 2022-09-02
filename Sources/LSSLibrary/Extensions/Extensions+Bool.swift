@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 extension Bool {
     public var stringYorN: String {
         return self ? "Y": "N"

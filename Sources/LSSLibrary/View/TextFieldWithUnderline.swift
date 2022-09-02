@@ -9,7 +9,6 @@ import SwiftUI
 
 @available(iOS 13, * )
 public struct TextFieldWithUnderline: View {
-
     @State private var text: String = ""
     var placeholder: String
     var onFousLineColor: Color = .red

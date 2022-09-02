@@ -7,22 +7,20 @@
 
 import SwiftUI
 
-public struct Popup<T:View> : ViewModifier {
-    let popup:T
+@available(iOS 13.0, *)
+public struct Popup<T: View>: ViewModifier {
+    let popup: T
     let isPresented: Bool
-    
-    public init(isPresented:Bool , @ViewBuilder content:() -> T) {
+    public init(isPresented: Bool, @ViewBuilder content: () -> T) {
         self.isPresented = isPresented
         popup = content()
     }
-    
     public func body(content: Content) -> some View {
         content
-            //.edgesIgnoringSafeArea(.all)
+            // .edgesIgnoringSafeArea(.all)
             .overlay(popupContent())
-            //.navigationBarHidden(true)
+            // .navigationBarHidden(true)
     }
-    
     @ViewBuilder private func popupContent() -> some View {
         GeometryReader { geometry in
             if isPresented {

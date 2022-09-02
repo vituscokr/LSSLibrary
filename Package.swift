@@ -3,10 +3,10 @@
 import PackageDescription
 let package = Package(
     name: "LSSLibrary",
-//    platforms: [
-//        .macOS(.v10_12),
-//        .iOS(.v13)
-//    ],
+    platforms: [
+        .macOS(.v10_13),
+        .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -15,14 +15,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
+         // Dependencies declare other packages that this package depends on.
 //        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "5.1.0")),
 //        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.1.0")),
-//        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .branch("master")),
-//        .package(url: "https://github.com/airbnb/lottie-ios.git", .branch("master")),
-        //.package(url: "https://github.com/tilltue/TLPhotoPicker.git", .upToNextMajor(from: "2.1.0")),
-        
-        //.package(url: "https://github.com/realm/realm-swift.git", .branch("master"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -41,14 +36,9 @@ let package = Package(
         .target(
             name: "LSSLibrary",
             dependencies: [
-//                "SwiftyJSON",
 //                "Alamofire",
 //                .product(name: "KingfisherSwiftUI", package: "Kingfisher"),
-//                .product(name: "Lottie", package: "lottie-ios"),
-                //"TLPhotoPicker",
-            ],
-            plugins: ["SwiftLintPlugin"]
-        ),
+            ]),
         .testTarget(
             name: "LSSLibraryTests",
             dependencies: ["LSSLibrary"]),
