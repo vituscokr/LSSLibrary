@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//import SwiftyJSON
-//extension JSON{
+// import SwiftyJSON
+// extension JSON{
 //    public mutating func appendIfArray(json:JSON){
 //        if var arr = self.array{
 //            arr.append(json)
@@ -21,4 +21,4 @@ import Foundation
 //            self = JSON(dict);
 //        }
 //    }
-//}
+// }

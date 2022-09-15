@@ -7,7 +7,7 @@
 
 import Foundation
 import Network
-/**
+/*
  샘플 코드
  
  class SampleModel : ObservableObject {

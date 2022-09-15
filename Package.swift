@@ -1,6 +1,7 @@
 // swift-tools-version:5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
+/*
 let package = Package(
     name: "LSSLibrary",
     platforms: [
@@ -8,42 +9,53 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "LSSLibrary",
             targets: ["LSSLibrary"]
         ),
     ],
     dependencies: [
-         // Dependencies declare other packages that this package depends on.
-//        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "5.1.0")),
-//        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.1.0")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-//        .binaryTarget(
-//            name: "SwiftLintBinary",
-//            url:
-//                "https://github.com/realm/SwiftLint/releases/download/0.49.1/SwiftLintBinary-macos.artifactbundle.zip",
-//            checksum: "227258fdb2f920f8ce90d4f08d019e1b0db5a4ad2090afa012fd7c2c91716df3"
-//        ),
-//        .plugin(
-//            name: "SwiftLintPlugin",
-//            capability: .buildTool(),
-//            dependencies: ["SwiftLintBinary"]
-//        ),
         .target(
             name: "LSSLibrary",
             dependencies: [
-//                "Alamofire",
-//                .product(name: "KingfisherSwiftUI", package: "Kingfisher"),
             ]
         ),
-            
         .testTarget(
             name: "LSSLibraryTests",
             dependencies: ["LSSLibrary"]),
     ]
 )
-
+ 
+ Showing Recent Messages
+ Error: The folder “7ffc1a0aa421bfbddf0a27749e0dcf3d49377ee842715a119a02bcd06c0a3a2f.plist” doesn’t exist.
+ "227258fdb2f920f8ce90d4f08d019e1b0db5a4ad2090afa012fd7c2c91716df3"
+ "7ffc1a0aa421bfbddf0a27749e0dcf3d49377ee842715a119a02bcd06c0a3a2f"
+*/
+let package = Package(
+    name: "LSSLibrary",
+    platforms: [
+        .macOS(.v10_13),
+        .iOS(.v13)
+    ],
+    products: [
+        .library(
+            name: "LSSLibrary",
+            targets: ["LSSLibrary"]
+        ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.0.1"),
+    ],
+    targets: [
+        .target(
+            name: "LSSLibrary",
+            dependencies: [
+            ],
+            plugins: [
+                .plugin(name: "SwiftLint", package: "SwiftLintPlugin")
+            ]
+        ),
+    ]
+)

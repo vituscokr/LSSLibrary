@@ -11,7 +11,7 @@ public struct Thumb {
     var title: String
     var image: String
     var url: URL?
-    public init(title: String = "", image: String = "", url: String = ""  ){
+    public init(title: String = "", image: String = "", url: String = "" ) {
         self.title = title
         self.image = image
         if url != "" {
