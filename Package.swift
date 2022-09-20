@@ -46,12 +46,22 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "5.1.0")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.1.0")),
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .branch("master")),
+        .package(url: "https://github.com/airbnb/lottie-ios.git", .branch("master")),
+        .package(url: "https://github.com/tilltue/TLPhotoPicker.git", .upToNextMajor(from: "2.1.0")),
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.0.1"),
     ],
     targets: [
         .target(
             name: "LSSLibrary",
             dependencies: [
+                "SwiftyJSON",
+                "Alamofire",
+                .product(name: "KingfisherSwiftUI", package: "Kingfisher"),
+                .product(name: "Lottie", package: "lottie-ios"),
+                "TLPhotoPicker",
             ],
             plugins: [
                 .plugin(name: "SwiftLint", package: "SwiftLintPlugin")
