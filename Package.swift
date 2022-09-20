@@ -48,8 +48,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "5.1.0")),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.1.0")),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0"),
-        .package(url: "https://github.com/airbnb/lottie-ios.git", from: "3.4.3"),
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/airbnb/lottie-ios.git", .upToNextMajor(from: "3.4.0")),
         .package(url: "https://github.com/tilltue/TLPhotoPicker.git", .upToNextMajor(from: "2.1.0")),
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.0.1"),
     ],
